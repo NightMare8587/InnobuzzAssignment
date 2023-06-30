@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">InnobuzzAssignment</string>
+    <string name="accessibility_service_label">Accessibility Service\n</string>
+    <string name="accessibility_service_description">Whatsapp opened</string>
+</resources>
