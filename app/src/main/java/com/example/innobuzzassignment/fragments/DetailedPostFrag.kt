@@ -11,6 +11,8 @@ import com.example.innobuzzassignment.R
 class DetailedPostFrag : Fragment() {
     private lateinit var titleView : TextView
     private lateinit var bodyView : TextView
+    private lateinit var userIdView: TextView
+    private lateinit var idView: TextView
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -23,11 +25,17 @@ class DetailedPostFrag : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         titleView = view.findViewById(R.id.titleTextView)
         bodyView = view.findViewById(R.id.bodyTextView)
+        userIdView = view.findViewById(R.id.userIdText)
+        idView = view.findViewById(R.id.postIdText)
         val args = arguments
         val title = args?.getString("title")
         val body = args?.getString("body")
+        val userId = args?.getString("userId")
+        val id = args?.getString("id")
 
         titleView.text = title
         bodyView.text = body
+        userIdView.text = "User ID: $userId"
+        idView.text = "ID: $id"
     }
 }

@@ -41,6 +41,8 @@ class PostsAdapter(val context : Context) : RecyclerView.Adapter<PostsAdapter.Ho
             val args = Bundle()
             args.putString("title",list[position].title)
             args.putString("body",list[position].body)
+            args.putString("userId",list[position].userId.toString())
+            args.putString("id",list[position].id.toString())
             val detailedPostFrag = DetailedPostFrag()
             detailedPostFrag.arguments = args
             manager.beginTransaction().replace(R.id.fragmentContainer,detailedPostFrag,"detailed_frag").addToBackStack(null).commit()
